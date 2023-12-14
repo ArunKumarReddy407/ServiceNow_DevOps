@@ -4,9 +4,9 @@ name: CICD GitHub workflow
 
 on: workflow_dispatch
   # push:
-  #   branches: [ "main" ]
+  #   branches: [ "main1" ]
   # pull_request:
-  #   branches: [ "main" ]
+  #   branches: [ "main1" ]
   #   types: [opened, synchronize, reopened]
 
 jobs:
