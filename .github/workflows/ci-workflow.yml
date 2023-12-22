@@ -36,13 +36,13 @@ jobs:
     - name: Run Tests with Maven
       run: mvn -B test --file pom.xml
     - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action/composite@v2
+      uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
         files: |
           test-results/**/*.xml
           test-results/**/*.trx
-          test-results/**/*.json
+          test-results/**/*.json   
 
     - name: ServiceNow DevOps Unit Test Results
     # You may pin to the exact commit or the version.
