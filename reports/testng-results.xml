@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-26T13:06:56 UTC" name="Suite" finished-at="2023-12-26T13:06:56 UTC" duration-ms="60">
+  <suite started-at="2023-12-26T13:07:46 UTC" name="Suite" finished-at="2023-12-26T13:07:46 UTC" duration-ms="58">
     <groups>
     </groups>
-    <test started-at="2023-12-26T13:06:56 UTC" name="Test" finished-at="2023-12-26T13:06:56 UTC" duration-ms="60">
+    <test started-at="2023-12-26T13:07:46 UTC" name="Test" finished-at="2023-12-26T13:07:46 UTC" duration-ms="58">
       <class name="com.test.CalculatorTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="setUp" finished-at="2023-12-26T13:06:56 UTC" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="setUp" finished-at="2023-12-26T13:07:46 UTC" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAdd()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="testAdd" finished-at="2023-12-26T13:06:56 UTC" duration-ms="2" status="PASS">
+        <test-method signature="testAdd()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="testAdd" finished-at="2023-12-26T13:07:46 UTC" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAdd -->
-        <test-method signature="testDivide()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="testDivide" finished-at="2023-12-26T13:06:56 UTC" duration-ms="0" status="PASS">
+        <test-method signature="testDivide()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="testDivide" finished-at="2023-12-26T13:07:46 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivide -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="setUp" finished-at="2023-12-26T13:06:56 UTC" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="setUp" finished-at="2023-12-26T13:07:46 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="setUp" finished-at="2023-12-26T13:06:56 UTC" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="setUp" finished-at="2023-12-26T13:07:46 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testDivideByZero()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="testDivideByZero" finished-at="2023-12-26T13:06:56 UTC" duration-ms="0" status="PASS">
+        <test-method signature="testDivideByZero()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="testDivideByZero" finished-at="2023-12-26T13:07:46 UTC" duration-ms="0" status="PASS">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Division by zero is not allowed]]>
@@ -74,22 +74,22 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDivideByZero -->
-        <test-method signature="testMultiply()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="testMultiply" finished-at="2023-12-26T13:06:56 UTC" duration-ms="0" status="PASS">
+        <test-method signature="testMultiply()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="testMultiply" finished-at="2023-12-26T13:07:46 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMultiply -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="setUp" finished-at="2023-12-26T13:06:56 UTC" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="setUp" finished-at="2023-12-26T13:07:46 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSubtract()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="testSubtract" finished-at="2023-12-26T13:06:56 UTC" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="setUp" finished-at="2023-12-26T13:07:46 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSubtract()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:07:46 UTC" name="testSubtract" finished-at="2023-12-26T13:07:46 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSubtract -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalculatorTest@65f095f8]" started-at="2023-12-26T13:06:56 UTC" name="setUp" finished-at="2023-12-26T13:06:56 UTC" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
       </class> <!-- com.test.CalculatorTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
