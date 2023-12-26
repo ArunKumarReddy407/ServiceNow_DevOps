@@ -55,10 +55,10 @@ jobs:
                                                                           # if both JUnit & TestNG tests, use target/surefire-reports/testng-junit-results/testng-results.xml
 
     - name: Deploy to external repository
-     uses: dmnemec/copy_file_to_another_repo_action@main
-     env: 
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env: 
         API_TOKEN_GITHUB: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}   
-     with:
+      with:
         # GitHub Action output files
         source-directory: target/surefire-reports/testng-results.xml
         destination-github-username: ArunKumarReddy407
