@@ -54,31 +54,37 @@ jobs:
           xml-report-filename: target/surefire-reports/testng-results.xml # if only JUnit tests, use target/surefire-reports/testng-results.xml
                                                                           # if both JUnit & TestNG tests, use target/surefire-reports/testng-junit-results/testng-results.xml
 
-  registerArtifact:
-    name: 'Register Artifact'
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: ServiceNow DevOps Register Artifact
-    # You may pin to the exact commit or the version.          
-      uses: ServiceNow/servicenow-devops-register-artifact@v2.0.0
-      with:
-          # Devops Integration Token
-          devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
-          # ServiceNow Instance URL
-          instance-url: ${{ secrets.SN_INSTANCE_URL }}
-          # Orchestration Tool Id
-          tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
-          # Display Name of the Job
-          job-name: 'Register Artifact'
-          # Github Context
-          context-github: ${{ toJSON(github) }}
-          # List of Artifacts to be registered
-          artifacts: '[
-              {
-                  "name": "app-devops.jar",
-                  "version": "1.${{ github.run_number }}",
-                  "semanticVersion": "1.${{ github.run_number }}.0",
-                  "repositoryName": "${{ github.repository }}"
-              }
-          ]'
+   - name: Deploy to external repository
+     uses: cpina/github-action-push-to-another-repository@main
+     env:
+          # 🏗️ <internal repository>, run GitHub Action.
+          # 🎁 <external repository>, receiving Artifacts.
+          #
+          # Way 1: using Personal Access Token
+          # @see https://cpina.github.io/push-to-another-repository-docs/setup-using-personal-access-token.html#setup-personal-access-token
+          # 1.1 Generate Personal Access Token: <external repository>/<Avatar>/Settings/Developer settings/Personal access tokens/Generate new token
+          #     Select `No expiration` and Check `✅️ repo    Full control of private repositories`, Generate and then Copy the Token
+          # 1.2 Then make the token available to the GitHub Action: <internal repository>/Settings/Secrets/Actions/New repository secret
+          #     Name: EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN, Value Paste the Token
+          API_TOKEN_GITHUB: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}
+          # Way 2: using SSH deploy keys
+          # @see https://cpina.github.io/push-to-another-repository-docs/setup-using-ssh-deploy-keys.html#setup-ssh-deploy-keys
+          # 2.1 Generate an SSH key in terminal (Leave the passphrase empty)
+          # 2.2 Add public key in the external repository: <external repository>/Settings/Deploy keys/Add deploy key
+          #     Name: DEPLOY_PUBLIC_KEY, Value Paste the public key. Enable "✅️ Allow write access"
+          # 2.3 Add private key in the source repository: <external repository>/Settings/Secrets/Actions/New repository secret
+          #     Name: DEPLOY_PRIVATE_KEY, Value Paste the private key.
+          # SSH_DEPLOY_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+
+        with:
+          # GitHub Action output files
+          source-directory: target/surefire-reports/testng-results.xml
+          destination-github-username: ArunKumarReddy407
+          destination-repository-name: ServiceNow_DevOps_AppName1
+          destination_folder: 'reports'
+          #user-email: <your email>
+          # It defaults to `main`
+          target-branch: "main"
+
+      - name: Test get variable exported by push-to-another-repository
+        run: echo $DESTINATION_CLONED_DIRECTORY
