@@ -60,12 +60,12 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}   
       with:
         # GitHub Action output files
-        source-directory: target/surefire-reports/testng-results.xml
-        destination-github-username: ArunKumarReddy407
-        destination-repository-name: ServiceNow_DevOps_AppName1
+        source_file: 'target/surefire-reports/testng-results.xml'
+        user_name: 'ArunKumarReddy407'
+        destination_repo: 'ServiceNow_DevOps_AppName1'
         destination_folder: 'reports'
         #user-email: <your email>
         # It defaults to `main`
-        target-branch: "main"
+        #target-branch: "main"
         commit_message: 'A custom message for the commit'
 
