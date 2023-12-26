@@ -62,7 +62,7 @@ jobs:
         # GitHub Action output files
         source_file: 'target/surefire-reports/testng-results.xml'
         user_name: 'ArunKumarReddy407'
-        destination_repo: 'ServiceNow_DevOps_AppName1'
+        destination_repo: 'ArunKumarReddy407/ServiceNow_DevOps'
         destination_folder: 'reports'
         #user-email: <your email>
         # It defaults to `main`
