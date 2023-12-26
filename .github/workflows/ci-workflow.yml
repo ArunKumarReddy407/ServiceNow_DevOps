@@ -54,13 +54,12 @@ jobs:
           xml-report-filename: target/surefire-reports/testng-results.xml # if only JUnit tests, use target/surefire-reports/testng-results.xml
                                                                           # if both JUnit & TestNG tests, use target/surefire-reports/testng-junit-results/testng-results.xml
 
-   - name: Deploy to external repository
+    - name: Deploy to external repository
      uses: dmnemec/copy_file_to_another_repo_action@main
      env: 
-        API_TOKEN_GITHUB: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}
-        
+        API_TOKEN_GITHUB: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}   
      with:
-      # GitHub Action output files
+        # GitHub Action output files
         source-directory: target/surefire-reports/testng-results.xml
         destination-github-username: ArunKumarReddy407
         destination-repository-name: ServiceNow_DevOps_AppName1
@@ -68,4 +67,5 @@ jobs:
         #user-email: <your email>
         # It defaults to `main`
         target-branch: "main"
+        commit_message: 'A custom message for the commit'
 
